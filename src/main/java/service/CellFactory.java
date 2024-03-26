@@ -10,6 +10,7 @@ import java.lang.reflect.InvocationTargetException;
 import java.util.Map;
 
 
+
 public class CellFactory {
     private final InhabitantConfig inhabitantConfig = new InhabitantConfig();
 
@@ -35,7 +36,6 @@ public class CellFactory {
                 }
 
                 number = (int) (Math.random() * maxNumberOnCell);   // задание количества животных на клетке при инициализации клетки острова
-
 
 
             for (int i = 0; i <= number; i++) {
