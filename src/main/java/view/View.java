@@ -19,7 +19,7 @@ public class View {
     int generationNumber;
 
     public synchronized void printIsland(Island island, String taskName) {
-synchronized (this) {
+
             System.out.println(IslandConstants.NEXT_GEN + ++generationNumber + " *********************************");
             System.out.println(taskName);
             for (int i = 0; i < island.getX(); i++) {
@@ -27,12 +27,12 @@ synchronized (this) {
                     out.print("cell " + (i) + "/" + (j) + "    ");
                     print(island.getIsland().get(i).get(j));
                 }
-            }
+
         }
 //        island.getIsland().stream().flatMap(Collection::stream).forEach(this::print);
     }
 
-    public synchronized void print(Cell cell) {
+    public void print(Cell cell) {
         Grass grass = new Grass();
         int count;
         for (Class<? extends Inhabitant> inhabitantClass : inhabitantConfig.inhabitantClassList) {

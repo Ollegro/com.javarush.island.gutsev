@@ -22,17 +22,17 @@ public class IslandController {
         island = islandFactory.getInitialIsland();
 
     }
-    public void printInitialIsland() {
+    public synchronized void printInitialIsland() {
         view.printIsland(island, IslandConstants.START_NEW_ISLAND);
     }
-    public void animalEat() {
+    public synchronized void animalEat() {
         island.getIsland().stream()
                 .flatMap(Collection::stream)
                 .forEach(cellController::animalEat);
         view.printIsland(island, IslandConstants.ANIMAL_EAT);
     }
 
-    public void grassGrow() {
+    public synchronized void grassGrow() {
 
         island.getIsland().stream()
                 .flatMap(Collection::stream)
@@ -40,7 +40,7 @@ public class IslandController {
         view.printIsland(island, IslandConstants.GRASS_GROW);
 
     }
-    public void animalMove() {
+    public synchronized void animalMove() {
 
         island = moveTask.animalMove(island);
         view.printIsland(island, IslandConstants.ANIMAL_MOVE);
@@ -51,7 +51,7 @@ public class IslandController {
                 .forEach(cellController::animalReproduction);
         view.printIsland(island, IslandConstants.ANIMAL_REPRODUCTION);
     }
-    public void totalStatistics() {
+    public synchronized void totalStatistics() {
 
         Cell totalCell = new Cell();
         List<List<Cell>> llc = island.getIsland();
