@@ -10,12 +10,12 @@ import java.util.concurrent.locks.ReentrantLock;
 
 public class RunTask implements Runnable {
 
-    private final ScheduledExecutorService service = Executors.newScheduledThreadPool(0);
+    private final ScheduledExecutorService service = Executors.newScheduledThreadPool(8);
     private final IslandController islandController = new IslandController();
     ReentrantLock lock = new ReentrantLock(true);
     @Override
-    public void run() {
-        lock.lock();
+    public synchronized void run() {
+
         islandController.printInitialIsland();
         try {
             Thread.sleep(2000);
@@ -27,7 +27,7 @@ public class RunTask implements Runnable {
             service.scheduleAtFixedRate(islandController::animalMove, 4, 15, TimeUnit.SECONDS);
             service.scheduleAtFixedRate(islandController::animalReproduction, 5, 15, TimeUnit.SECONDS);
             service.scheduleAtFixedRate(islandController::totalStatistics, 8, 15, TimeUnit.SECONDS);
-        lock.unlock();
+
 
 
     }
