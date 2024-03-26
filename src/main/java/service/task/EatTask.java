@@ -5,6 +5,7 @@ import model.Island.Cell;
 import model.animal.Animal;
 import model.animal.Inhabitant;
 import model.plant.Plant;
+
 import java.lang.reflect.InvocationTargetException;
 import java.util.Map;
 import java.util.concurrent.ThreadLocalRandom;

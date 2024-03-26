@@ -7,11 +7,8 @@ import model.animal.Animal;
 import model.plant.Plant;
 import service.task.MoveTask;
 import view.View;
-
-import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
-import java.util.concurrent.CopyOnWriteArrayList;
 
 public class IslandController {
     int count = 0;

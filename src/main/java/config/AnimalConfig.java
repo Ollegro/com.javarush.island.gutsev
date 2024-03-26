@@ -6,6 +6,7 @@ import com.fasterxml.jackson.dataformat.yaml.YAMLFactory;
 import lombok.Getter;
 import lombok.extern.slf4j.Slf4j;
 import model.animal.Animal;
+
 import java.io.File;
 import java.util.HashMap;
 import java.util.HashSet;

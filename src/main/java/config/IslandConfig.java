@@ -1,5 +1,7 @@
 package config;
+
 import util.PropertiesReader;
+
 import java.util.Properties;
 
 public class IslandConfig {

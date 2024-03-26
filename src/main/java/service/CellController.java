@@ -16,7 +16,7 @@ public class CellController {
     public void grassGrow(Cell cell) {
         grassGrowTask.grassGrow(cell);
     }
-    public  synchronized void animalReproduction(Cell cell) {
+    public void animalReproduction(Cell cell) {
             reproductionTask.animalReproduction(cell);
     }
 
