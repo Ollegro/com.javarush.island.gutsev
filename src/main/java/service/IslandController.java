@@ -12,7 +12,8 @@ import java.util.Collection;
 import java.util.List;
 
 public class IslandController {
-    int count = 0;
+    public static int count;
+
     private final View view = new View();
     private final MoveTask moveTask = new MoveTask();
     private final IslandFactory islandFactory = new IslandFactory();
@@ -66,19 +67,20 @@ public class IslandController {
                 }
             }
         }
-        try {            Thread.sleep(3000);
-        } catch (InterruptedException e) {
-            throw new RuntimeException(e);
-        }
+//        try {            Thread.sleep(100);
+//        } catch (InterruptedException e) {
+//            throw new RuntimeException(e);
+//        }
         System.out.println("\n".repeat(1) + "********************************* CYCLE STATISTIC **********************************");
-        System.out.print("Total on the Island  CYCLE " + ++count + "  ");
+        count++;
+        System.out.print("Total on the Island  CYCLE " + count + "  ");
         view.print(totalCell);
         System.out.println("*********************************** END CYCLE *************************************" + "\n".repeat(3) );
-        try {
-            Thread.sleep(3000);
-        } catch (InterruptedException e) {
-            throw new RuntimeException(e);
-        }
+//        try {
+//            Thread.sleep(100);
+//        } catch (InterruptedException e) {
+//            throw new RuntimeException(e);
+//        }
 
     }
 }
