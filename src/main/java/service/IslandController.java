@@ -7,6 +7,7 @@ import model.animal.Animal;
 import model.plant.Plant;
 import service.task.MoveTask;
 import view.View;
+
 import java.util.Collection;
 import java.util.List;
 
