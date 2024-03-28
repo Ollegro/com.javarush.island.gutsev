@@ -1,7 +1,6 @@
 package service.task;
 
 import service.IslandController;
-
 import java.util.concurrent.Executors;
 import java.util.concurrent.ScheduledExecutorService;
 import java.util.concurrent.TimeUnit;
@@ -9,13 +8,10 @@ import java.util.concurrent.TimeUnit;
 
 
 public class RunTask implements Runnable {
-
     private final ScheduledExecutorService service = Executors.newScheduledThreadPool(8);
     private final IslandController islandController = new IslandController();
-
     @Override
-    public synchronized void run() {
-
+    public void run() {
         islandController.printInitialIsland();
         try {
             Thread.sleep(2000);

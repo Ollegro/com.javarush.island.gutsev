@@ -18,9 +18,7 @@ public class IslandController {
     private static Island island;
     private final CellController cellController = new CellController();
     {
-
         island = islandFactory.getInitialIsland();
-
     }
     public synchronized void printInitialIsland() {
         view.printIsland(island, IslandConstants.START_NEW_ISLAND);
