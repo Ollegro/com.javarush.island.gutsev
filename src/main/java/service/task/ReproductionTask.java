@@ -7,7 +7,6 @@ import model.animal.Inhabitant;
 
 import java.lang.reflect.InvocationTargetException;
 import java.util.Objects;
-import java.util.concurrent.ThreadLocalRandom;
 public class ReproductionTask {
     private final InhabitantConfig inhabitantConfig = new InhabitantConfig();
     public void animalReproduction(Cell cell) {
