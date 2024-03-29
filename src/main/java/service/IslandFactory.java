@@ -1,11 +1,13 @@
 package service;
 
+import lombok.Getter;
 import model.Island.Island;
-
+@Getter
 
 public class IslandFactory {
     private final Island island = new Island();
     private final CellFactory cellFactory = new CellFactory();
+
 
     public  Island getInitialIsland() {
 

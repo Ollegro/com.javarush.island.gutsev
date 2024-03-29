@@ -16,4 +16,5 @@ public class IslandConfig {
     public int getIslandSizeByY() {
         return Integer.parseInt(island.getProperty(IslandConstants.Y));
     }
+    public int timeOfPeriod = (getIslandSizeByX() * getIslandSizeByY() * 2);
 }
