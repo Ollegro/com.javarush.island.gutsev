@@ -8,7 +8,7 @@ import model.plant.Plant;
 
 import java.lang.reflect.InvocationTargetException;
 import java.util.Map;
-
+import java.util.concurrent.ThreadLocalRandom;
 
 
 public class CellFactory {
@@ -35,8 +35,10 @@ public class CellFactory {
                     }
                 }
 
-                number = (int) (Math.random() * maxNumberOnCell);   // задание количества животных на клетке при инициализации клетки острова
-                  //  number =(int) ThreadLocalRandom.current().nextDouble(1.0)*maxNumberOnCell;inhabitantConfig.maxNumberOnCellMap.get(inhabitantClass);
+                number = (ThreadLocalRandom.current().nextInt(100) * maxNumberOnCell)/100;// задание количества животных на клетке при инициализации клетки острова
+
+                //number = (int) (Math.random() * maxNumberOnCell);
+
 
             for (int i = 0; i <= number; i++) {
                 try {
