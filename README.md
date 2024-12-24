@@ -3,4 +3,4 @@
 Настройки игры могут быть изменены в папке resources. 
 
 Запуск программы mvn compile exec:java, предварительно настройте терминал на UTF-8 командой chcp 65001
-   
+Использованы Lombok, log4j, junit-jupiter,maven, java.util.concurrent   
